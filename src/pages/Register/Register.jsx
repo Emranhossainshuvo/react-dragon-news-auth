@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 
 
-const Login = () => {
+const Register = () => {
 
-    const handleLogin = e => {
+    const handleRegister = e => {
         e.preventDefault();
         console.log(e.currentTarget)
         const form = new FormData(e.currentTarget)
@@ -17,7 +17,7 @@ const Login = () => {
             <div>
                 <h2 className="text-3xl text-center my-10">Please login</h2>
                 <div className="hero min-h-screen bg-base-200">
-                    <form onSubmit={handleLogin} className="card-body">
+                    <form onSubmit={handleRegister} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -36,7 +36,7 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
                         </div>
-                        <p>Do not have an account? <Link className="text-blue-600 underline">Register</Link></p>
+                        <p>Already have an account? <Link className="text-blue-600 underline">Login</Link></p>
                     </form>
                 </div>
             </div>
@@ -44,4 +44,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
